@@ -23,3 +23,19 @@
 // for(let i = 1; i<=10 ; i++){
 //   console.log(num * i)
 // }
+
+/*----- Lexical Scoping ------*/
+
+function outer(){
+  let a = 10;
+  function inner(){
+    let b = 20;
+    function innerMost(){
+      let c = 30;
+      console.log(a,b,c);
+    }
+    innerMost()
+  }
+  inner();
+}
+outer()
